@@ -2,8 +2,7 @@ package org.usfirst.frc.team4169.robot;
 
 import edu.wpi.first.wpilibj.buttons.Button;
 import org.usfirst.frc.team4169.robot.commands.ExampleCommand;
-//test
-//test 2
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
