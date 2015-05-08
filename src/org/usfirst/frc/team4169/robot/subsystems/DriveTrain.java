@@ -12,14 +12,14 @@ import edu.wpi.first.wpilibj.*;
 public class DriveTrain extends Subsystem {
 	private RobotDrive drive = RobotMap.DRIVE;
 	
-	public void drive() {
-		drive.drive(1, 0);
-	}
-
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public void mechDrive(Joystick j) {
+		drive.
 	}
     
 }
