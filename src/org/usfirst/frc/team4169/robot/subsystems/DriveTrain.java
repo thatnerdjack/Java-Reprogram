@@ -19,7 +19,11 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void mechDrive(Joystick j) {
-		drive.
+		mechDrive(j.getX(), j.getY(), j.getTwist());
+	}
+	
+	public void mechDrive(double x, double y, double rotation) {
+		drive.mecanumDrive_Cartesian(x, y, rotation, 0);
 	}
     
 }
