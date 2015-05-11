@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4169.robot.subsystems;
 
 import org.usfirst.frc.team4169.robot.RobotMap;
+import org.usfirst.frc.team4169.robot.commands.MecanumDriveWithController;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -14,8 +15,7 @@ public class DriveTrain extends Subsystem {
 	
 	@Override
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
-		
+		setDefaultCommand(new MecanumDriveWithController());
 	}
 	
 	public void mechDrive(Joystick j) {
