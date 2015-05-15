@@ -12,6 +12,8 @@ public class OI {
 	
 	private Joystick joy = new Joystick(0);
 	
+	
+	
 	public OI() {
 	    //// CREATING BUTTONS
 	    // One type of button is a joystick button which is any button on a joystick.
@@ -41,8 +43,8 @@ public class OI {
 	    // button.whenReleased(new ExampleCommand());
 			
 		JoystickButton d_up = new JoystickButton(joy, 5);
-	    JoystickButton d_right= new JoystickButton(joy, 6);
-	    JoystickButton d_down= new JoystickButton(joy, 7);
+	    JoystickButton d_right = new JoystickButton(joy, 6);
+	    JoystickButton d_down = new JoystickButton(joy, 7);
 	    JoystickButton d_left = new JoystickButton(joy, 8);
 	    JoystickButton l2 = new JoystickButton(joy, 9);
 	    JoystickButton r2 = new JoystickButton(joy, 10);
@@ -50,10 +52,15 @@ public class OI {
 	    JoystickButton r1 = new JoystickButton(joy, 12);
 	    
 	    
+	    
 	}
 	    
     public Joystick getJoystick() {
         return joy;
+    }
+    
+    public boolean getTurnRight(){
+    	return d_right.get();
     }
 	
 }
