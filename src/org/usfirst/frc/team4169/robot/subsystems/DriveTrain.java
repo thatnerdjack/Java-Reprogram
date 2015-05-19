@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4169.robot.subsystems;
 
+import org.usfirst.frc.team4169.robot.Robot;
 import org.usfirst.frc.team4169.robot.RobotMap;
 import org.usfirst.frc.team4169.robot.commands.MecanumDriveWithController;
 
@@ -18,7 +19,16 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void mechDrive(Joystick j) {
-		mechDrive(j.getX(), j.getY(), 0);
+		if(Robot.oi.doesTurnRight()){
+			mechDrive(j.getX(), j.getY(), 0.5);
+		}
+		else if(Robot.oi.doesTurnLeft()){
+			mechDrive(j.getX(), j.getY(), -0.5);
+		}
+		else {
+			mechDrive(j.getX(), j.getY(), 0);
+		}
+		
 	}
 	
 	public void mechDrive(double x, double y, double rotation) {
