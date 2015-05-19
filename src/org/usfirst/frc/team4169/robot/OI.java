@@ -11,8 +11,15 @@ import org.usfirst.frc.team4169.robot.commands.*;
 public class OI {
 	
 	private Joystick joy = new Joystick(0);
+	private JoystickButton d_up;
+	private JoystickButton d_down;
+	private JoystickButton d_left;
+	private JoystickButton d_right;
 	
-	
+	private JoystickButton l2;
+	private JoystickButton r2;
+	private JoystickButton l1;
+	private JoystickButton r1;
 	
 	public OI() {
 	    //// CREATING BUTTONS
@@ -42,25 +49,27 @@ public class OI {
 	    // until it is finished as determined by it's isFinished method.
 	    // button.whenReleased(new ExampleCommand());
 			
-		JoystickButton d_up = new JoystickButton(joy, 5);
-	    JoystickButton d_right = new JoystickButton(joy, 6);
-	    JoystickButton d_down = new JoystickButton(joy, 7);
-	    JoystickButton d_left = new JoystickButton(joy, 8);
-	    JoystickButton l2 = new JoystickButton(joy, 9);
-	    JoystickButton r2 = new JoystickButton(joy, 10);
-	    JoystickButton l1 = new JoystickButton(joy, 11);
-	    JoystickButton r1 = new JoystickButton(joy, 12);
-	    
-	    
-	    
+		d_up = new JoystickButton(joy, 5);
+	    d_right = new JoystickButton(joy, 6);
+	    d_down = new JoystickButton(joy, 7);
+	    d_left = new JoystickButton(joy, 8);
+	    l2 = new JoystickButton(joy, 9);
+	    r2 = new JoystickButton(joy, 10);
+	    l1 = new JoystickButton(joy, 11);
+	    r1 = new JoystickButton(joy, 12);
+	    	    
 	}
 	    
     public Joystick getJoystick() {
         return joy;
     }
     
-    public boolean getTurnRight(){
+    public boolean doesTurnRight(){
     	return d_right.get();
+    }
+    
+    public boolean doesTurnLeft(){
+    	return d_left.get();
     }
 	
 }
