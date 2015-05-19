@@ -24,6 +24,7 @@ public class Robot extends IterativeRobot {
 
     
     public void robotInit() {
+    	RobotMap.init();
 		oi = new OI();
         driveTrain = new DriveTrain();
     }
