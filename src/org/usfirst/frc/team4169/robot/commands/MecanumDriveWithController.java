@@ -3,6 +3,7 @@ package org.usfirst.frc.team4169.robot.commands;
 import org.usfirst.frc.team4169.robot.Robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -24,6 +25,7 @@ public class MecanumDriveWithController extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Robot.driveTrain.mechDrive(Robot.oi.getJoystick());
+    	Timer.delay(0.005);
     }
 
     // Make this return true when this Command no longer needs to run execute()
