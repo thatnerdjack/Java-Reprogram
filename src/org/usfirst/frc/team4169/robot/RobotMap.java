@@ -1,7 +1,5 @@
 package org.usfirst.frc.team4169.robot;
 
-import java.util.prefs.BackingStoreException;
-
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -21,16 +19,16 @@ public class RobotMap {
     public static RobotDrive DRIVE;
     
     public static void init() {
-    	DRIVE_FRONT_LEFT_MOTOR = new Talon(12);
+    	DRIVE_FRONT_LEFT_MOTOR = new Talon(0);
     	LiveWindow.addActuator("DriveTrain", "Motor FL", (Talon) DRIVE_FRONT_LEFT_MOTOR);
     	
-		DRIVE_FRONT_RIGHT_MOTOR = new Talon(3);
+		DRIVE_FRONT_RIGHT_MOTOR = new Talon(2);
 		LiveWindow.addActuator("DriveTrain", "Motor FL", (Talon) DRIVE_FRONT_RIGHT_MOTOR);
 		
-		DRIVE_BACK_LEFT_MOTOR = new Talon(13);
+		DRIVE_BACK_LEFT_MOTOR = new Talon(1);
 		LiveWindow.addActuator("DriveTrain", "Motor FL", (Talon) DRIVE_BACK_LEFT_MOTOR);
 		
-		DRIVE_BACK_RIGHT_MOTOR = new Talon(2);
+		DRIVE_BACK_RIGHT_MOTOR = new Talon(3);
 		LiveWindow.addActuator("DriveTrain", "Motor FL", (Talon) DRIVE_BACK_RIGHT_MOTOR);
 		
 		DRIVE = new RobotDrive(DRIVE_BACK_LEFT_MOTOR, DRIVE_FRONT_LEFT_MOTOR, DRIVE_BACK_RIGHT_MOTOR, DRIVE_FRONT_RIGHT_MOTOR);

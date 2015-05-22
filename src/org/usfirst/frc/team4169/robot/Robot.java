@@ -66,6 +66,6 @@ public class Robot extends IterativeRobot {
     }
     
     public void log() {
-    	//do later
+    	driveTrain.log();
     }
 }
