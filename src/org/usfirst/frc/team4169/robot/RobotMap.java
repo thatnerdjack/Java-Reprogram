@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * floating around.
  */
 public class RobotMap {
+	//DriveTrain
     public static Talon DRIVE_FRONT_LEFT_MOTOR;
     public static Talon DRIVE_FRONT_RIGHT_MOTOR;
     public static Talon DRIVE_BACK_LEFT_MOTOR;
@@ -18,7 +19,12 @@ public class RobotMap {
     
     public static RobotDrive DRIVE;
     
+    //Lift
+    public static Talon LIFT_MOTOR_LEFT;
+    public static Talon LIFT_MOTOR_RIGHT;
+    
     public static void init() {
+    	//DriveTrain
     	DRIVE_FRONT_LEFT_MOTOR = new Talon(0);
     	LiveWindow.addActuator("DriveTrain", "Motor FL", (Talon) DRIVE_FRONT_LEFT_MOTOR);
     	
@@ -32,5 +38,9 @@ public class RobotMap {
 		LiveWindow.addActuator("DriveTrain", "Motor FL", (Talon) DRIVE_BACK_RIGHT_MOTOR);
 		
 		DRIVE = new RobotDrive(DRIVE_BACK_LEFT_MOTOR, DRIVE_FRONT_LEFT_MOTOR, DRIVE_BACK_RIGHT_MOTOR, DRIVE_FRONT_RIGHT_MOTOR);
+		
+		//Lift
+		LIFT_MOTOR_LEFT = new Talon(4);
+		LIFT_MOTOR_RIGHT = new Talon(5);
 	}
 }

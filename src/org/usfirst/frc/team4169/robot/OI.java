@@ -71,6 +71,14 @@ public class OI {
     public boolean doesTurnLeft(){
     	return d_left.get();
     }
+    
+    public boolean doesMoveUp(){
+    	return d_up.get();
+    }
+    
+    public boolean doesMoveDown(){
+    	return d_down.get();
+    }
 	
 }
 
