@@ -2,6 +2,7 @@ package org.usfirst.frc.team4169.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
 import org.usfirst.frc.team4169.robot.commands.*;
 
 /**
@@ -57,7 +58,9 @@ public class OI {
 	    r2 = new JoystickButton(joy, 10);
 	    l1 = new JoystickButton(joy, 11);
 	    r1 = new JoystickButton(joy, 12);
-	    	    
+	    
+	    d_up.whileHeld(new LiftUpWithJoystick());
+	    d_down.whileHeld(new LiftDownWithJoystick());	    
 	}
 	    
     public Joystick getJoystick() {
