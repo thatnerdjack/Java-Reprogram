@@ -25,9 +25,9 @@ public class Robot extends IterativeRobot {
     
     public void robotInit() {
     	RobotMap.init();
-		oi = new OI();
         driveTrain = new DriveTrain();
         lift = new Lift();
+		oi = new OI();
     }
 
     public void autonomousInit() {
