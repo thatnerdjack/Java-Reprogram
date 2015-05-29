@@ -39,7 +39,10 @@ public class DriveTrain extends Subsystem {
 			mechDrive(j.getX(), j.getY(), 0);
 			loggedTurnPower = 0;
 		}
-		
+	}
+	
+	public void turn(double turnPower){
+		drive.mecanumDrive_Cartesian(0, 0, turnPower, 0);
 	}
 	
 	public void mechDrive(double x, double y, double rotation) {
