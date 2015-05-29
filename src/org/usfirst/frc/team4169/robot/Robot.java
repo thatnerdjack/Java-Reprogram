@@ -21,12 +21,13 @@ public class Robot extends IterativeRobot {
     
     public static DriveTrain driveTrain;
     public static OI oi;
-
+    public static Lift lift;
     
     public void robotInit() {
     	RobotMap.init();
 		oi = new OI();
         driveTrain = new DriveTrain();
+        lift = new Lift();
     }
 
     public void autonomousInit() {
