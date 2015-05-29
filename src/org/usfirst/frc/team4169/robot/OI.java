@@ -49,10 +49,10 @@ public class OI {
 	    // until it is finished as determined by it's isFinished method.
 	    // button.whenReleased(new ExampleCommand());
 			
-		d_up = new JoystickButton(joy, 5);
-	    d_right = new JoystickButton(joy, 6);
-	    d_down = new JoystickButton(joy, 7);
-	    d_left = new JoystickButton(joy, 8);
+		d_up = new JoystickButton(joy, 3);
+	    d_right = new JoystickButton(joy, 5);
+	    d_down = new JoystickButton(joy, 2);
+	    d_left = new JoystickButton(joy, 4);
 	    l2 = new JoystickButton(joy, 9);
 	    r2 = new JoystickButton(joy, 10);
 	    l1 = new JoystickButton(joy, 11);
