@@ -10,8 +10,10 @@ import org.usfirst.frc.team4169.robot.commands.*;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-	
 	private Joystick joy = new Joystick(0);
+	
+	private JoystickButton trigger;
+	
 	private JoystickButton d_up;
 	private JoystickButton d_down;
 	private JoystickButton d_left;
@@ -50,6 +52,7 @@ public class OI {
 	    // until it is finished as determined by it's isFinished method.
 	    // button.whenReleased(new ExampleCommand());
 			
+		trigger = new JoystickButton(joy, 1);
 		d_up = new JoystickButton(joy, 3);
 	    d_right = new JoystickButton(joy, 5);
 	    d_down = new JoystickButton(joy, 2);
@@ -67,20 +70,24 @@ public class OI {
         return joy;
     }
     
-    public boolean doesTurnRight(){
+    public boolean doesTurnRight() {
     	return d_right.get();
     }
     
-    public boolean doesTurnLeft(){
+    public boolean doesTurnLeft() {
     	return d_left.get();
     }
     
-    public boolean doesMoveUp(){
+    public boolean doesMoveUp() {
     	return d_up.get();
     }
     
-    public boolean doesMoveDown(){
+    public boolean doesMoveDown() {
     	return d_down.get();
+    }
+    
+    public boolean isTriggerPulled() {
+    	return trigger.get();
     }
 	
 }

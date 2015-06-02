@@ -24,8 +24,10 @@ public class MecanumDriveWithController extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveTrain.mechDrive(Robot.oi.getJoystick());
-    	Timer.delay(0.005);
+    	if(Robot.oi.isTriggerPulled()) {
+    		Robot.driveTrain.mechDrive(Robot.oi.getJoystick());
+    		Timer.delay(0.005);
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -27,16 +27,16 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void mechDrive(Joystick j) {
-		if(Robot.oi.doesTurnRight()){
-			mechDrive(j.getX(), j.getY(), 0.5);
+		if(Robot.oi.doesTurnRight()) {
+			mechDrive(0.5, j.getY(), j.getX());
 			loggedTurnPower = 0.5;
 		}
-		else if(Robot.oi.doesTurnLeft()){
-			mechDrive(j.getX(), j.getY(), -0.5);
+		else if(Robot.oi.doesTurnLeft()) {
+			mechDrive(-0.5, j.getY(), j.getX());
 			loggedTurnPower = -0.5;
 		}
 		else {
-			mechDrive(j.getX(), j.getY(), 0);
+			mechDrive(0, j.getY(), j.getX());
 			loggedTurnPower = 0;
 		}
 	}
