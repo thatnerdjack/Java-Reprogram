@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team4169.robot;
 
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -18,6 +19,7 @@ import org.usfirst.frc.team4169.robot.subsystems.*;
  */
 public class Robot extends IterativeRobot {
     Command autonomousCommand;
+    CameraServer server;
     
     public static DriveTrain driveTrain;
     public static OI oi;
@@ -28,6 +30,11 @@ public class Robot extends IterativeRobot {
         driveTrain = new DriveTrain();
         lift = new Lift();
 		oi = new OI();
+		
+		server = CameraServer.getInstance();
+        server.setQuality(50);
+        //the camera name (ex "cam0") can be found through the roborio web interface
+        server.startAutomaticCapture("cam0");
     }
 
     public void autonomousInit() {
