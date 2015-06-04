@@ -18,7 +18,7 @@ import org.usfirst.frc.team4169.robot.subsystems.*;
  * directory.
  */
 public class Robot extends IterativeRobot {
-    Command autonomousCommand;
+    Command testAutonomous;
     CameraServer server;
     
     public static DriveTrain driveTrain;
@@ -35,11 +35,13 @@ public class Robot extends IterativeRobot {
         server.setQuality(50);
         //the camera name (ex "cam0") can be found through the roborio web interface
         server.startAutomaticCapture("cam0");
+        
+        testAutonomous = new TestAutonomous();
     }
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-        if (autonomousCommand != null) autonomousCommand.start();
+        if (testAutonomous != null) testAutonomous.start();
     }
 
     /**
@@ -55,7 +57,7 @@ public class Robot extends IterativeRobot {
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        if (autonomousCommand != null) autonomousCommand.cancel();
+        if (testAutonomous != null) testAutonomous.cancel();
     }
 
     /**

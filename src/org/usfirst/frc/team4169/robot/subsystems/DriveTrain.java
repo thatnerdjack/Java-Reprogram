@@ -49,6 +49,10 @@ public class DriveTrain extends Subsystem {
 		drive.mecanumDrive_Cartesian(-x, y, rotation, 0);
 	}
 	
+	public void stopDrive(){
+		mechDrive(0, 0, 0);
+	}
+	
 	public void log() {
 		SmartDashboard.putNumber("Front Right Power:", RobotMap.DRIVE_FRONT_RIGHT_MOTOR.getSpeed());
 		SmartDashboard.putNumber("Front Left Power:", RobotMap.DRIVE_FRONT_LEFT_MOTOR.getSpeed());
