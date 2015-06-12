@@ -10,7 +10,8 @@ import org.usfirst.frc.team4169.robot.commands.*;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-	private Joystick joy = new Joystick(0);
+	private Joystick driverJoy= new Joystick(0);
+	private Joystick liftJoy = new Joystick(1);
 	
 	private JoystickButton trigger;
 	
@@ -52,22 +53,26 @@ public class OI {
 	    // until it is finished as determined by it's isFinished method.
 	    // button.whenReleased(new ExampleCommand());
 			
-		trigger = new JoystickButton(joy, 1);
-		d_up = new JoystickButton(joy, 3);
-	    d_right = new JoystickButton(joy, 5);
-	    d_down = new JoystickButton(joy, 2);
-	    d_left = new JoystickButton(joy, 4);
-	    l2 = new JoystickButton(joy, 9);
-	    r2 = new JoystickButton(joy, 10);
-	    l1 = new JoystickButton(joy, 11);
-	    r1 = new JoystickButton(joy, 12);
+		trigger = new JoystickButton(driverJoy, 1);
+		d_up = new JoystickButton(driverJoy, 3);
+	    d_right = new JoystickButton(driverJoy, 5);
+	    d_down = new JoystickButton(driverJoy, 2);
+	    d_left = new JoystickButton(driverJoy, 4);
+	    l2 = new JoystickButton(driverJoy, 9);
+	    r2 = new JoystickButton(driverJoy, 10);
+	    l1 = new JoystickButton(driverJoy, 11);
+	    r1 = new JoystickButton(driverJoy, 12);
 	    
 	    d_up.whileHeld(new LiftUpWithJoystick());
 	    d_down.whileHeld(new LiftDownWithJoystick());	    
 	}
 	    
-    public Joystick getJoystick() {
-        return joy;
+    public Joystick getDriverJoystick() {
+        return driverJoy;
+    }
+    
+    public Joystick getLiftJoystick() {
+    	return liftJoy;
     }
     
     public boolean doesTurnRight() {
