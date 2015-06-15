@@ -1,8 +1,6 @@
 package org.usfirst.frc.team4169.robot.commands;
 
 import org.usfirst.frc.team4169.robot.Robot;
-import org.usfirst.frc.team4169.robot.subsystems.Lift;
-
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -25,7 +23,7 @@ public class LiftUpWithJoystick extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return Robot.lift.isLiftAtTop();
     }
 
     // Called once after isFinished returns true
