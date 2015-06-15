@@ -36,7 +36,7 @@ public class Robot extends IterativeRobot {
         //the camera name (ex "cam0") can be found through the roborio web interface
         server.startAutomaticCapture("cam0");
         
-        autonomusCommand = new TestAutonomous();
+        autonomusCommand = new AutonomousDemo();
     }
 
     public void autonomousInit() {
